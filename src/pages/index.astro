@@ -1,10 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title='Welcome to Astro.'>
 	<main>
-		<h1>Porfolio</h1>
+		<section class="w-full lg:w-[740px] mx-auto py-44">
+			<h1 class='text-white text-5xl font-bold flex items-center gap-x-4 pb-4'>
+				Hey, soy Humberto <Badge>Disponible para trabajar</Badge>
+			</h1>
+			<h2 class="text-xl">
+				+4 años de expriencia. Desarrollador Frontend y Profesor de la Carrera
+				Certified Tech Developer. De Buenos Aires, Argentina. Especializado en
+				tecnologías modernas como React, TypeScript, JavaScript, Redux, y
+				Next.js. Apasionado por las buenas prácticas de desarrollo, como SOLID y
+				Clean Code. Con experiencia en la creación de proyectos robustos y
+				escalables, tanto en el ámbito profesional como educativo.
+			</h2>
+		</section>
 	</main>
 </Layout>
