@@ -4,20 +4,17 @@ import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 ---
 
-<Layout title='Welcome to Astro.'>
+<Layout title='Humberto Rivero'>
 	<main>
 		<section class='w-full lg:w-[740px] mx-auto py-12 xl:py-44'>
-			<!-- <img
-				class='rounded-full h-12 w-12 mb-4'
-				src='https://avatars.githubusercontent.com/u/63797901?v=4'
-				alt='mi photo'
-			/> -->
 			<img
 				class='rounded-full h-16 w-16 mb-4'
 				src='/images/avatar.png'
 				alt='mi photo'
 			/>
-			<h1 class='text-white text-5xl font-bold flex flex-col items-start xl:flex-row xl:items-center gap-4 pb-10'>
+			<h1
+				class='text-white text-5xl font-bold flex flex-col items-start xl:flex-row xl:items-center gap-4 pb-10'
+			>
 				Hey, soy Humberto <a
 					href='https://www.linkedin.com/in/humberto-rivero-castro/'
 					target='_blank'
@@ -25,9 +22,14 @@ import Badge from "../components/Badge.astro";
 					class='flex items-center'><Badge>Disponible para trabajar</Badge></a
 				>
 			</h1>
-			<h2 class='text-xl opacity-80'>
-				+4 años de expriencia. Desarrollador Frontend y Profesor de la Carrera
-				Certified Tech Developer. Especializado en crear aplicaciones unicas.
+			<h2 class='text-2xl opacity-80 text-wrap'>
+				<span>+4 años de expriencia</span>. <span class='text-violet-400/90'
+					>Desarrollador Frontend y Profesor de la Carrera Certified Tech
+					Developer</span
+				>. <span class='text-sky-300/90'>De Argentina, Buenos Aires</span>. <span
+					class='opacity-70'
+					>Especializado en proyectos innovadores y escalables.</span
+				>
 			</h2>
 		</section>
 	</main>
