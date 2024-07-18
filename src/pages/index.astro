@@ -6,14 +6,17 @@ import Linkedin from "../components/icons/Linkedin.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Github from "../components/icons/Github.astro";
 import Email from "../components/icons/Email.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Work from "../components/icons/Work.astro";
 ---
 
 <Layout 
 	title='Humberto Rivero - Desarrollador Frontend y Profesor'
 	description='Humberto Rivero - Desarrollador Frontend y Profesor de la Carrera Certified Tech Developer'
 	>
-	<main>
-		<section class='w-full lg:w-[740px] mx-auto py-12 xl:py-44'>
+	<main class="flex flex-col gap-40 mt-44">
+		<SectionContainer>
 			<img
 				class='rounded-full h-16 w-16 mb-4'
 				src='/images/avatar.png'
@@ -22,7 +25,7 @@ import Email from "../components/icons/Email.astro";
 			<h1
 				class='text-white text-5xl font-bold flex flex-col items-start xl:flex-row xl:items-center gap-4 pb-10'
 			>
-				Hey, soy Humberto <a
+				Hola, soy Humberto <a
 					href='https://www.linkedin.com/in/humberto-rivero-castro/'
 					target='_blank'
 					rel='noopener'
@@ -68,6 +71,14 @@ import Email from "../components/icons/Email.astro";
 					</li>
 				</ul>
 			</nav>
-		</section>
+		</SectionContainer>
+
+		<SectionContainer id="experience">
+			<h2 class='text-2xl opacity-80 font-semibold mb-6 flex items-center gap-4'>
+				<Work class='size-7' />
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
 	</main>
 </Layout>
