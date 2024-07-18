@@ -2,9 +2,16 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Github from "../components/icons/Github.astro";
+import Email from "../components/icons/Email.astro";
 ---
 
-<Layout title='Humberto Rivero'>
+<Layout 
+	title='Humberto Rivero - Desarrollador Frontend y Profesor'
+	description='Humberto Rivero - Desarrollador Frontend y Profesor de la Carrera Certified Tech Developer'
+	>
 	<main>
 		<section class='w-full lg:w-[740px] mx-auto py-12 xl:py-44'>
 			<img
@@ -31,6 +38,36 @@ import Badge from "../components/Badge.astro";
 					>Especializado en proyectos innovadores y escalables.</span
 				>
 			</h2>
+
+			<!-- Redes -->
+			<nav class='mt-6'>
+				<ul class='flex gap-4'>
+					<li>
+						<SocialPill
+							href='https://www.linkedin.com/in/humberto-rivero-castro/'
+						>
+							<Linkedin class='w-6 h-6' />
+							<span>LinkedIn</span>
+						</SocialPill>
+					</li>
+					<li>
+						<SocialPill
+							href='https://github.com/humbertodrc'
+						>
+							<Github class='w-6 h-6' />
+							<span>Github</span>
+						</SocialPill>
+					</li>
+					<li>
+						<SocialPill
+							href='mailto:humbertoriver9@gmail.com'
+						>
+							<Email class='w-6 h-6' />
+							<span>humbertoriver9@gmail.com</span>
+						</SocialPill>
+					</li>
+				</ul>
+			</nav>
 		</section>
 	</main>
 </Layout>
