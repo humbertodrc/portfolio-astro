@@ -6,17 +6,28 @@ import Badge from "../components/Badge.astro";
 
 <Layout title='Welcome to Astro.'>
 	<main>
-		<section class="w-full lg:w-[740px] mx-auto py-44">
-			<h1 class='text-white text-5xl font-bold flex items-center gap-x-4 pb-4'>
-				Hey, soy Humberto <Badge>Disponible para trabajar</Badge>
+		<section class='w-full lg:w-[740px] mx-auto py-12 xl:py-44'>
+			<!-- <img
+				class='rounded-full h-12 w-12 mb-4'
+				src='https://avatars.githubusercontent.com/u/63797901?v=4'
+				alt='mi photo'
+			/> -->
+			<img
+				class='rounded-full h-16 w-16 mb-4'
+				src='/images/avatar.png'
+				alt='mi photo'
+			/>
+			<h1 class='text-white text-5xl font-bold flex flex-col items-start xl:flex-row xl:items-center gap-4 pb-10'>
+				Hey, soy Humberto <a
+					href='https://www.linkedin.com/in/humberto-rivero-castro/'
+					target='_blank'
+					rel='noopener'
+					class='flex items-center'><Badge>Disponible para trabajar</Badge></a
+				>
 			</h1>
-			<h2 class="text-xl">
+			<h2 class='text-xl opacity-80'>
 				+4 años de expriencia. Desarrollador Frontend y Profesor de la Carrera
-				Certified Tech Developer. De Buenos Aires, Argentina. Especializado en
-				tecnologías modernas como React, TypeScript, JavaScript, Redux, y
-				Next.js. Apasionado por las buenas prácticas de desarrollo, como SOLID y
-				Clean Code. Con experiencia en la creación de proyectos robustos y
-				escalables, tanto en el ámbito profesional como educativo.
+				Certified Tech Developer. Especializado en crear aplicaciones unicas.
 			</h2>
 		</section>
 	</main>
