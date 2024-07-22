@@ -2,8 +2,10 @@
 import Logo from "./Logo.astro";
 ---
 
-<header class="flex justify-between items-center py-5 w-full lg:max-w-4xl mx-auto px-4 md:px-0">
-  <Logo />
+<header
+	class='flex justify-between items-center py-5 w-full lg:max-w-4xl mx-auto md:px-4 md:px-0'
+>
+	<!-- <Logo />
 
   <div class="block lg:hidden">
     <button id="menu-button" class="text-gray-500 focus:outline-none">
@@ -29,18 +31,153 @@ import Logo from "./Logo.astro";
     <a class="hover:text-violet-400/90 cursor-pointer" href="#contact">
       Contacto
     </a>
-  </nav>
+  </nav> -->
+
+	<nav
+		class='w-full relative flex justify-between items-center'
+	>
+		<a class='text-3xl font-bold leading-none' href='/'>
+      <Logo />
+		</a>
+		<div class='lg:hidden'>
+			<button class='navbar-burger flex items-center text-gray-400'>
+				<svg
+					class='block h-4 w-4 fill-current'
+					viewBox='0 0 20 20'
+					xmlns='http://www.w3.org/2000/svg'
+				>
+					<title>mobile menu</title>
+					<path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z'></path>
+				</svg>
+			</button>
+		</div>
+		<ul
+			class='hidden lg:flex lg:items-center lg:w-auto lg:space-x-6'
+		>
+			<li>
+				<a class="hover:text-violet-400/90 cursor-pointer" href="#top">
+          Inicio
+        </a>
+			</li>
+			<li>
+        <a class="hover:text-violet-400/90 cursor-pointer" href="#about">
+          Sobre mí
+        </a>
+      </li>
+			<li>
+        <a class="hover:text-violet-400/90 cursor-pointer" href="#experience">
+          Experiencia
+        </a>
+			</li>
+			<li>
+        <a class="hover:text-violet-400/90 cursor-pointer" href="#projects">
+          Proyectos
+        </a>
+			</li>
+			<li>
+				<a class="hover:text-violet-400/90 cursor-pointer" href="#contact">
+          Contacto
+        </a>
+			</li>
+		</ul>
+	</nav>
+	<div class='navbar-menu relative z-50 hidden'>
+		<div class='navbar-backdrop fixed inset-0 bg-slate-900 opacity-25'></div>
+		<nav
+			class='fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-slate-950  overflow-y-auto'
+		>
+			<div class='flex items-center mb-8'>
+				<a class='mr-auto text-3xl font-bold leading-none' href='/'>
+          <Logo />
+				</a>
+				<!-- <button class='navbar-close'>
+					<svg
+						class='h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500'
+						xmlns='http://www.w3.org/2000/svg'
+						fill='none'
+						viewBox='0 0 24 24'
+						stroke='currentColor'
+					>
+						<path
+							stroke-linecap='round'
+							stroke-linejoin='round'
+							stroke-width='2'
+							d='M6 18L18 6M6 6l12 12'></path>
+					</svg>
+				</button> -->
+			</div>
+			<div>
+				<ul class="flex flex-col gap-8 mt-6">
+					<li>
+						<a class="hover:text-violet-400/90 cursor-pointer" href="#top">
+              Inicio
+            </a>
+					</li>
+					<li>
+						<a class="hover:text-violet-400/90 cursor-pointer" href="#about">
+              Sobre mí
+            </a>
+					</li>
+					<li>
+						<a class="hover:text-violet-400/90 cursor-pointer" href="#experience">
+              Experiencia
+            </a>
+					</li>
+					<li>
+						<a class="hover:text-violet-400/90 cursor-pointer" href="#projects">
+              Proyectos
+            </a>
+					</li>
+					<li>
+						<a class="hover:text-violet-400/90 cursor-pointer" href="#contact">
+              Contacto
+            </a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
 </header>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.getElementById('menu-button') as HTMLButtonElement;
-    const navMenu = document.getElementById('nav-menu') as HTMLDivElement;
+	// Burger menus
+	document.addEventListener("DOMContentLoaded", function () {
+		// open
+		const burger = document.querySelectorAll(".navbar-burger");
+		const menu = document.querySelectorAll(".navbar-menu");
 
-    menuButton.addEventListener('click', () => {
-      navMenu.classList.add('flex');
-      navMenu.classList.toggle('hidden');
-    });
-  });
+		if (burger.length && menu.length) {
+			for (var i = 0; i < burger.length; i++) {
+				burger[i].addEventListener("click", function () {
+					for (var j = 0; j < menu.length; j++) {
+						menu[j].classList.toggle("hidden");
+					}
+				});
+			}
+		}
+
+		// close
+		const close = document.querySelectorAll(".navbar-close");
+		const backdrop = document.querySelectorAll(".navbar-backdrop");
+
+		if (close.length) {
+			for (var i = 0; i < close.length; i++) {
+				close[i].addEventListener("click", function () {
+					for (var j = 0; j < menu.length; j++) {
+						menu[j].classList.toggle("hidden");
+					}
+				});
+			}
+		}
+
+		if (backdrop.length) {
+			for (var i = 0; i < backdrop.length; i++) {
+				backdrop[i].addEventListener("click", function () {
+					for (var j = 0; j < menu.length; j++) {
+						menu[j].classList.toggle("hidden");
+					}
+				});
+			}
+		}
+	});
 </script>
-
