@@ -2,139 +2,119 @@
 import Logo from "./Logo.astro";
 ---
 
-<header
-	class='flex justify-between items-center py-5 w-full lg:max-w-4xl mx-auto md:px-4 md:px-0'
->
-	<!-- <Logo />
-
-  <div class="block lg:hidden">
-    <button id="menu-button" class="text-gray-500 focus:outline-none">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-    </button>
-  </div>
-
-  <nav id="nav-menu" class="hidden absolute top-10 left-0 right-0 bottom-0 md:static flex-col lg:flex lg:flex-row gap-4 xl:gap-x-10 opacity-80">
-    <a class="hover:text-violet-400/90 cursor-pointer" href="#top">
-      Inicio
-    </a>
-    <a class="hover:text-violet-400/90 cursor-pointer" href="#about">
-      Sobre mí
-    </a>
-    <a class="hover:text-violet-400/90 cursor-pointer" href="#experience">
-      Experiencia
-    </a>
-    <a class="hover:text-violet-400/90 cursor-pointer" href="#projects">
-      Proyectos
-    </a>
-    <a class="hover:text-violet-400/90 cursor-pointer" href="#contact">
-      Contacto
-    </a>
-  </nav> -->
-
-	<nav class='w-full relative flex justify-between items-center'>
-		<a class='text-3xl font-bold leading-none' href='/'>
-			<Logo />
-		</a>
-		<div class='lg:hidden'>
-			<button class='navbar-burger flex items-center text-gray-400'>
-				<svg
-					class='block h-4 w-4 fill-current'
-					viewBox='0 0 20 20'
-					xmlns='http://www.w3.org/2000/svg'
-				>
-					<title>mobile menu</title>
-					<path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z'></path>
-				</svg>
-			</button>
-		</div>
-		<ul class='hidden lg:flex lg:items-center lg:w-auto lg:space-x-6'>
-			<li>
-				<a class='hover:text-violet-400/90 cursor-pointer' href='#top'>
-					Inicio
-				</a>
-			</li>
-			<li>
-				<a class='hover:text-violet-400/90 cursor-pointer' href='#about'>
-					Sobre mí
-				</a>
-			</li>
-			<li>
-				<a class='hover:text-violet-400/90 cursor-pointer' href='#experience'>
-					Experiencia
-				</a>
-			</li>
-			<li>
-				<a class='hover:text-violet-400/90 cursor-pointer' href='#projects'>
-					Proyectos
-				</a>
-			</li>
-			<li>
-				<a class='hover:text-violet-400/90 cursor-pointer' href='#contact'>
-					Contacto
-				</a>
-			</li>
-		</ul>
-	</nav>
-	<div class='navbar-menu relative z-50 hidden'>
-		<div class='navbar-backdrop fixed inset-0 bg-slate-900 opacity-25'></div>
-		<nav
-			class='fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-slate-950 overflow-y-auto'
-		>
-			<div class='flex items-center mb-8'>
-				<a class='mr-auto text-3xl font-bold leading-none' href='/'>
-					<Logo />
-				</a>
-				<!-- <button class='navbar-close'>
+<header class='py-6 w-full lg:fixed top-0 z-20 left-0 right-0'>
+	<div
+		class='flex justify-between items-center lg:max-w-4xl mx-auto px-4 relative'
+	>
+		<nav class='w-full relative flex justify-between items-center'>
+			<a class='text-3xl font-bold leading-none' href='/'>
+				<Logo />
+			</a>
+			<div class='lg:hidden'>
+				<button class='navbar-burger flex items-center text-gray-400'>
 					<svg
-						class='h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500'
+						class='block h-4 w-4 fill-current'
+						viewBox='0 0 20 20'
 						xmlns='http://www.w3.org/2000/svg'
-						fill='none'
-						viewBox='0 0 24 24'
-						stroke='currentColor'
 					>
-						<path
-							stroke-linecap='round'
-							stroke-linejoin='round'
-							stroke-width='2'
-							d='M6 18L18 6M6 6l12 12'></path>
+						<title>mobile menu</title>
+						<path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z'></path>
 					</svg>
-				</button> -->
+				</button>
 			</div>
-			<div>
-				<ul class='flex flex-col gap-8 mt-6'>
-					<li>
-						<a class='hover:text-violet-400/90 cursor-pointer' href='#top'>
-							Inicio
-						</a>
-					</li>
-					<li>
-						<a class='hover:text-violet-400/90 cursor-pointer' href='#about'>
-							Sobre mí
-						</a>
-					</li>
-					<li>
-						<a
-							class='hover:text-violet-400/90 cursor-pointer'
-							href='#experience'
-						>
-							Experiencia
-						</a>
-					</li>
-					<li>
-						<a class='hover:text-violet-400/90 cursor-pointer' href='#projects'>
-							Proyectos
-						</a>
-					</li>
-					<li>
-						<a class='hover:text-violet-400/90 cursor-pointer' href='#contact'>
-							Contacto
-						</a>
-					</li>
-				</ul>
-			</div>
+			<ul class='hidden lg:flex lg:items-center lg:w-auto lg:space-x-6'>
+				<li>
+					<a class='hover:text-violet-400/90 cursor-pointer' href='#top'>
+						Inicio
+					</a>
+				</li>
+				<li>
+					<a class='hover:text-violet-400/90 cursor-pointer' href='#about'>
+						Sobre mí
+					</a>
+				</li>
+				<li>
+					<a class='hover:text-violet-400/90 cursor-pointer' href='#experience'>
+						Experiencia
+					</a>
+				</li>
+				<li>
+					<a class='hover:text-violet-400/90 cursor-pointer' href='#projects'>
+						Proyectos
+					</a>
+				</li>
+				<li>
+					<a class='hover:text-violet-400/90 cursor-pointer' href='#contact'>
+						Contacto
+					</a>
+				</li>
+			</ul>
 		</nav>
+		<div class='navbar-menu relative z-50 hidden'>
+			<div class='navbar-backdrop fixed inset-0 bg-slate-900 opacity-25'></div>
+			<nav
+				class='fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-slate-950 overflow-y-auto'
+			>
+				<div class='flex items-center mb-8'>
+					<a class='mr-auto text-3xl font-bold leading-none' href='/'>
+						<Logo />
+					</a>
+					<button class='navbar-close'>
+						<svg
+							class='h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500'
+							xmlns='http://www.w3.org/2000/svg'
+							fill='none'
+							viewBox='0 0 24 24'
+							stroke='currentColor'
+						>
+							<path
+								stroke-linecap='round'
+								stroke-linejoin='round'
+								stroke-width='2'
+								d='M6 18L18 6M6 6l12 12'></path>
+						</svg>
+					</button>
+				</div>
+				<div>
+					<ul class='flex flex-col gap-8 mt-6'>
+						<li>
+							<a class='hover:text-violet-400/90 cursor-pointer' href='#top'>
+								Inicio
+							</a>
+						</li>
+						<li>
+							<a class='hover:text-violet-400/90 cursor-pointer' href='#about'>
+								Sobre mí
+							</a>
+						</li>
+						<li>
+							<a
+								class='hover:text-violet-400/90 cursor-pointer'
+								href='#experience'
+							>
+								Experiencia
+							</a>
+						</li>
+						<li>
+							<a
+								class='hover:text-violet-400/90 cursor-pointer'
+								href='#projects'
+							>
+								Proyectos
+							</a>
+						</li>
+						<li>
+							<a
+								class='hover:text-violet-400/90 cursor-pointer'
+								href='#contact'
+							>
+								Contacto
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
 	</div>
 </header>
 
@@ -180,3 +160,18 @@ import Logo from "./Logo.astro";
 		}
 	});
 </script>
+<style>
+	@media (min-width: 1024px) {
+		header {
+			animation: nav-shadown 1s linear both;
+			animation-timeline: scroll();
+			animation-range: 0 100px;
+		}
+
+		@keyframes nav-shadown {
+			to {
+				@apply shadow-lg ring-1 backdrop-blur dark:bg-violet-300/90 bg-violet-300/50 ring-white/10;
+			}
+		}
+	}
+</style>
