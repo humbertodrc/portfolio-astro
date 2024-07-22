@@ -106,12 +106,12 @@ const PROJECTS = [
 
 {
 	PROJECTS.map((project) => (
-		<article class='mb-24'>
+		<article class='mt-14 xl:mt-24'>
 			<h3 class='text-xl font-semibold text-violet-400/90 mb-2'>
 				{project.title}
 			</h3>
 			<p class='text-lg mb-4 text-pretty'>{project.description}</p>
-			<ul class='flex flex-wrap items-center gap-4 mb-4'>
+			<ul class='flex flex-wrap items-center gap-2 md:gap-4'>
 				{project.tags.map((tag) => (
 					<li>
 						<span class='flex items-center justify-center gap-2 rounded-xl text-xs py-1 px-2 border border-violet-400/90'>
@@ -135,7 +135,7 @@ const PROJECTS = [
 				</li>
 			</ul>
 			<img
-				class='rounded shadow-2xl shadow-white/10'
+				class='rounded shadow-2xl shadow-white/10 mt-4'
 				src={project.image}
 				alt={project.title}
 			/>
