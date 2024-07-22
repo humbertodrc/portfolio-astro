@@ -7,6 +7,7 @@ import TailwindIcon from "./icons/TailwindIcon.astro";
 import PhpIcon from "./icons/PhpIcon.astro";
 import LaravelIcon from "./icons/LaravelIcon.astro";
 import NextIcon from "./icons/NextIcon.astro";
+import ViewIcon from "./icons/ViewIcon.astro";
 
 const TAGS = {
 	HTML: {
@@ -68,12 +69,44 @@ const PROJECTS = [
 			TAGS.PHP,
 		],
 	},
+  {
+    title: "eTravelCars",
+    description:
+      "Sitio web de alquiler de autos, con sistema de reservas y pagos online. Desarrollado con Laravel y TailwindCSS. Para este proyecto tuve la oportunidad de trabajar en equipo y desarrollar el Frontend. Tambien trabaje en el desarrollo de algunas vistas del Backoffice.",
+    image: "/images/e-travel-cars.webp",
+    link: "https://etravelcars.com/",
+    // github: "https://github.com",
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.SASS,
+      TAGS.TAILWINDCSS,
+      TAGS.JAVASCRIPT,
+      TAGS.PHP,
+    ],
+  },
+  {
+    title: "abglac",
+    description:
+      "Sitio web de alquiler de autos, con sistema de reservas y pagos online. Desarrollado con Laravel y TailwindCSS. Para este proyecto tuve la oportunidad de trabajar en equipo y desarrollar el Frontend. Tambien trabaje en el desarrollo de algunas vistas del Backoffice.",
+    image: "/images/abg-lac.webp",
+    link: "https://abglac.com/",
+    // github: "https://github.com",
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.SASS,
+      TAGS.TAILWINDCSS,
+      TAGS.JAVASCRIPT,
+      TAGS.PHP,
+    ],
+  }
 ];
 ---
 
 {
 	PROJECTS.map((project) => (
-		<article>
+		<article class="mb-24">
 			<h3 class='text-xl font-semibold text-violet-400/90 mb-2'>
 				{project.title}
 			</h3>
@@ -87,6 +120,19 @@ const PROJECTS = [
 						</span>
 					</li>
 				))}
+        <li>
+          <span>
+            <a
+              href={project.link}
+              target='_blank'
+              rel='noopener'
+              class='flex items-center justify-center gap-2 rounded-xl text-xs py-1 px-2 border border-violet-400/90'
+            >
+              <span class="text-white">Ver proyecto</span>
+              <ViewIcon class='size-4' />
+            </a>
+          </span>
+        </li>
 			</ul>
 			<img
 				class='rounded shadow-2xl shadow-white/10'
