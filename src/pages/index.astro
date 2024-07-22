@@ -13,13 +13,14 @@ import Proyect from "../components/icons/Project.astro";
 import Projects from "../components/Projects.astro";
 import FormIcon from "../components/icons/FormIcon.astro";
 import Form from "../components/Form.astro";
+import AboutIcon from "../components/icons/AboutIcon.astro";
 ---
 
-<Layout 
+<Layout
 	title='Humberto Rivero - Desarrollador Frontend y Profesor'
 	description='Humberto Rivero - Desarrollador Frontend y Profesor de la Carrera Certified Tech Developer'
-	>
-	<main class="flex flex-col gap-14 md:gap-20 lg:gap-40 mt-11 lg:mt-44">
+>
+	<main class='flex flex-col gap-14 md:gap-20 lg:gap-40 mt-11 lg:mt-44'>
 		<SectionContainer>
 			<img
 				class='rounded-full h-16 w-16 mb-4'
@@ -58,17 +59,13 @@ import Form from "../components/Form.astro";
 						</SocialPill>
 					</li>
 					<li>
-						<SocialPill
-							href='https://github.com/humbertodrc'
-						>
+						<SocialPill href='https://github.com/humbertodrc'>
 							<Github class='size-6' />
 							<span>Github</span>
 						</SocialPill>
 					</li>
 					<li>
-						<SocialPill
-							href='mailto:humbertoriver9@gmail.com'
-						>
+						<SocialPill href='mailto:humbertoriver9@gmail.com'>
 							<Email class='size-6' />
 							<span>humbertoriver9@gmail.com</span>
 						</SocialPill>
@@ -77,27 +74,89 @@ import Form from "../components/Form.astro";
 			</nav>
 		</SectionContainer>
 
-		<SectionContainer id="experience">
-			<h2 class='text-2xl opacity-80 font-semibold mb-6 flex items-center gap-4'>
+		<SectionContainer id='about'>
+			<h2
+				class='text-2xl opacity-80 font-semibold mb-6 flex items-center gap-4'
+			>
+				<AboutIcon class='size-7' />
+				Sobre mí
+			</h2>
+			<div class='flex flex-col lg:flex-row gap-6'>
+				<img
+					class='rounded-lg shadow-2xl shadow-white/10'
+					src='/images/about-me.webp'
+					alt='Sobre mí'
+				/>
+				<div>
+					<p class='text-base mb-4'>
+						Desarrollador Frontend y Profesor de la Carrera Certified Tech
+						Developer. Me especializo en proyectos innovadores y escalables.
+						Actualmente trabajo en <a
+							href='https://www.greenflame.com.ar'
+							target='_blank'
+							rel='noopener'
+							class='text-violet-400/90'>greenFlame</a
+						> como Desarrollador Frontend y en <a
+							href='https://www.digitalhouse.com'
+							target='_blank'
+							rel='noopener'
+							class='text-violet-400/90'>Digital House</a
+						> como Profesor de la Carrera Certified Tech Developer. Tambien soy mentor
+						en Digital House, donde enseño y dicto talleres en vivo, además guío
+						a futuros desarrolladores en diversas tecnologías frontend.
+					</p>
+					<p class='text-base mb-4'>
+						En mi rol como Mentor y Community Manager Técnico en Digital House,
+						ofrezco soporte a estudiantes, resolviendo problemas técnicos y
+						proporcionando orientación personalizada. Como profesor, imparto
+						clases de especialización en Frontend, abarcando temas como React,
+						TypeScript, Redux, buenas prácticas de programación y principios
+						SOLID. Además, realizo code reviews y corrijo proyectos finales,
+						asegurando que los estudiantes cumplan con los estándares del
+						mercado.
+					</p>
+					<!-- <p class='text-base'>
+						Mi enfoque en la calidad y el rendimiento, combinado con mis
+						habilidades pedagógicas, me permite comunicar conceptos complejos de
+						manera clara y efectiva. Estoy comprometido con la actualización
+						constante de mis conocimientos para mantenerme al día con las
+						últimas tendencias en desarrollo frontend.
+					</p> -->
+				</div>
+			</div>
+		</SectionContainer>
+
+		<SectionContainer id='experience'>
+			<h2
+				class='text-2xl opacity-80 font-semibold mb-6 flex items-center gap-4'
+			>
 				<Work class='size-7' />
 				Experiencia Laboral
 			</h2>
 			<Experience />
 		</SectionContainer>
 
-		<SectionContainer id="projects">
-			<h2 class='text-2xl opacity-80 font-semibold mb-6 flex items-center gap-4'>
+		<SectionContainer id='projects'>
+			<h2
+				class='text-2xl opacity-80 font-semibold mb-6 flex items-center gap-4'
+			>
 				<Proyect class='size-7' />
 				Proyectos
 			</h2>
 			<Projects />
 		</SectionContainer>
 
-		<SectionContainer>
-			<h2 class='text-2xl opacity-80 font-semibold mb-6 flex items-center gap-4'>
+		<SectionContainer id='contact'>
+			<h2
+				class='text-2xl opacity-80 font-semibold mb-6 flex items-center gap-4'
+			>
 				<FormIcon class='size-7' />
 				Contacto
 			</h2>
+			<p class='text-lg mb-6'>
+				¿Tenés un proyecto en mente o querés charlar sobre tecnología?
+				¡Escribime!
+			</p>
 			<Form />
 		</SectionContainer>
 	</main>
