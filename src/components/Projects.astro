@@ -54,9 +54,41 @@ const TAGS = {
 
 const PROJECTS = [
 	{
+		title: "Abglac",
+		description:
+			"Sitio web de alquiler de autos con sistema de reservas y pagos online. Desarrollado con Laravel y TailwindCSS. En este proyecto, desempeñé el rol de Desarrollador Frontend en greenFlame, utilizando metodologías ágiles. Trabajé en el desarrollo del Frontend y algunas vistas del Backoffice, asegurando una experiencia de usuario fluida y moderna.",
+		image: "/images/abg-lac.webp",
+		link: "https://abglac.com/",
+		// github: "https://github.com",
+		tags: [
+			TAGS.HTML,
+			TAGS.CSS,
+			TAGS.SASS,
+			TAGS.TAILWINDCSS,
+			TAGS.JAVASCRIPT,
+			TAGS.PHP,
+		],
+	},
+	{
+		title: "eTravelCars",
+		description:
+			"Sitio web de alquiler de autos con sistema de reservas y pagos online. Desarrollado con Laravel y TailwindCSS. Como Desarrollador Frontend en greenFlame, implementé interfaces de usuario responsivas y accesibles utilizando Livewire. Utilicé Tailwind CSS para el diseño y estilizado, garantizando consistencia y rapidez en la maquetación. Creé componentes reutilizables y dinámicos para la gestión de la interfaz de usuario, además de trabajar en el maquetado de emails y documentos PDF relacionados con las reservas.",
+		image: "/images/e-travel-cars.webp",
+		link: "https://etravelcars.com/",
+		// github: "https://github.com",
+		tags: [
+			TAGS.HTML,
+			TAGS.CSS,
+			TAGS.SASS,
+			TAGS.TAILWINDCSS,
+			TAGS.JAVASCRIPT,
+			TAGS.PHP,
+		],
+	},
+	{
 		title: "Autorenta",
 		description:
-			"Sitio web de alquiler de autos, con sistema de reservas y pagos online. Desarrollado con Laravel y TailwindCSS. Para este proyecto tuve la oportunidad de trabajar en equipo y desarrollar el Frontend. Tambien trabaje en el desarrollo de algunas vistas del Backoffice.",
+			"Sitio web de alquiler de autos con sistema de reservas y pagos online. Desarrollado con Laravel y TailwindCSS. En este proyecto, como Desarrollador Frontend en greenFlame, utilicé metodologías ágiles para trabajar en equipo. Implementé interfaces de usuario responsivas y accesibles utilizando Livewire y Tailwind CSS. Creé componentes reutilizables y trabajé en el maquetado de emails y documentos PDF para las reservas, asegurando una experiencia de usuario moderna y fluida.",
 		image: "/images/auto-renta.webp",
 		link: "https://autorenta.com/",
 		// github: "https://github.com",
@@ -69,70 +101,38 @@ const PROJECTS = [
 			TAGS.PHP,
 		],
 	},
-  {
-    title: "eTravelCars",
-    description:
-      "Sitio web de alquiler de autos, con sistema de reservas y pagos online. Desarrollado con Laravel y TailwindCSS. Para este proyecto tuve la oportunidad de trabajar en equipo y desarrollar el Frontend. Tambien trabaje en el desarrollo de algunas vistas del Backoffice.",
-    image: "/images/e-travel-cars.webp",
-    link: "https://etravelcars.com/",
-    // github: "https://github.com",
-    tags: [
-      TAGS.HTML,
-      TAGS.CSS,
-      TAGS.SASS,
-      TAGS.TAILWINDCSS,
-      TAGS.JAVASCRIPT,
-      TAGS.PHP,
-    ],
-  },
-  {
-    title: "abglac",
-    description:
-      "Sitio web de alquiler de autos, con sistema de reservas y pagos online. Desarrollado con Laravel y TailwindCSS. Para este proyecto tuve la oportunidad de trabajar en equipo y desarrollar el Frontend. Tambien trabaje en el desarrollo de algunas vistas del Backoffice.",
-    image: "/images/abg-lac.webp",
-    link: "https://abglac.com/",
-    // github: "https://github.com",
-    tags: [
-      TAGS.HTML,
-      TAGS.CSS,
-      TAGS.SASS,
-      TAGS.TAILWINDCSS,
-      TAGS.JAVASCRIPT,
-      TAGS.PHP,
-    ],
-  }
 ];
 ---
 
 {
 	PROJECTS.map((project) => (
-		<article class="mb-24">
+		<article class='mb-24'>
 			<h3 class='text-xl font-semibold text-violet-400/90 mb-2'>
 				{project.title}
 			</h3>
 			<p class='text-lg mb-4 text-pretty'>{project.description}</p>
-			<ul class="flex flex-wrap items-center gap-4 mb-4">
+			<ul class='flex flex-wrap items-center gap-4 mb-4'>
 				{project.tags.map((tag) => (
 					<li>
-						<span class="flex items-center justify-center gap-2 rounded-xl text-xs py-1 px-2 border border-violet-400/90">
+						<span class='flex items-center justify-center gap-2 rounded-xl text-xs py-1 px-2 border border-violet-400/90'>
 							<tag.icon class='size-4 flex-shrink-0' />
-							<span class="text-white">{tag.name}</span>
+							<span class='text-white'>{tag.name}</span>
 						</span>
 					</li>
 				))}
-        <li>
-          <span>
-            <a
-              href={project.link}
-              target='_blank'
-              rel='noopener'
-              class='flex items-center justify-center gap-2 rounded-xl text-xs py-1 px-2 border border-violet-400/90'
-            >
-              <span class="text-white">Ver proyecto</span>
-              <ViewIcon class='size-4' />
-            </a>
-          </span>
-        </li>
+				<li>
+					<span>
+						<a
+							href={project.link}
+							target='_blank'
+							rel='noopener'
+							class='flex items-center justify-center gap-2 rounded-xl text-xs py-1 px-2 border border-violet-400/90'
+						>
+							<span class='text-white'>Ver proyecto</span>
+							<ViewIcon class='size-4' />
+						</a>
+					</span>
+				</li>
 			</ul>
 			<img
 				class='rounded shadow-2xl shadow-white/10'
